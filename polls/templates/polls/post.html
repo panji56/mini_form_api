@@ -79,15 +79,11 @@
                         <h4> Comments </h4>
                     </div>
                     {% for cm in comments %}
-                        <div class="row mt-4">
-                            <!-- show username who make comment to the post -->
-                            <div class="col">
-                                <i>by {{ cm.username.username }}. the comment</i>
-                            </div>
-                        </div>
                         <div class="row mt-4 border-bottom border-info">
                             <!-- show comment -->
                             <div class="col">
+                                <!-- show username who make comment to the post -->
+                                <i>by {{ cm.username.username }}. the comment</i>
                                 <p> - {{ cm.comment }}</p>
                             </div>
                             <!-- update comment -->

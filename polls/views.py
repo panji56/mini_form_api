@@ -130,9 +130,9 @@ def DeletePost(request):
         f_post = forumPost.objects.get(id_post=post_id)
         #if superuser, filter based only id_post
         if user.is_superuser:
-            post = forumPost.objects.filter(username=user).get(id_post=f_post.id_post)
-        else:
             post = forumPost.objects.get(id_post=f_post.id_post)
+        else:
+            post = forumPost.objects.filter(username=user).get(id_post=f_post.id_post)
         #delete content here
         post.delete()
     return redirect('/forum')

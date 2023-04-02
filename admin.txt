@@ -12,5 +12,5 @@ pass : 12345panji
 user : anotherpanji
 pass : iUjHyK998
 
-user : panjitest@email.com
+user : panjitest@gmail.com
 pass : Jikk90876
