@@ -14,6 +14,7 @@ Via GIT:
 Via ZIP Project:
 1. open github, https://github.com/panji56/mini_form_api
 2. click 'Code' and click 'Download ZIP'
+![Download ZIP Project](https://user-images.githubusercontent.com/42922801/229332391-27701222-8e97-4ed1-9376-ac84e61ea234.JPG)
 3. save it to downloads or your favorite folder
 4. the file name should be 'mini_form_api-Main'. then move to the favorite folder you desire
 5. on the directory you choose right click on the ZIP Project and click 'Extract Here' (if you use winrar)
