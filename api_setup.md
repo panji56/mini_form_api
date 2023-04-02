@@ -18,3 +18,6 @@ Via ZIP Project:
 4. use cmd and cd to path of directory and the folder where contain the project file
 4. on cmd type 'py manage.py runserver' to start the server
 5. open browser then type 'http://localhost:8000/forum to access the main page
+
+after complete set up you can back to readme.md to use the mini forum api
+https://github.com/panji56/mini_form_api/blob/39daba83e6b85a3d07106f09a7bf7cda93d2628a/README.md
