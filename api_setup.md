@@ -19,7 +19,6 @@ Via ZIP Project:
 ![Download ZIP Project to Folder](https://user-images.githubusercontent.com/42922801/229332424-2c9b283f-06f7-422d-88e7-923d3aca47d8.JPG)
 ![ZIP Project download location](https://user-images.githubusercontent.com/42922801/229332892-01b07169-f1c5-4bb5-9713-96fe8b6dc36a.JPG)
 4. the file name should be 'mini_form_api-Main'. then move to the favorite folder you desire
-![Download ZIP Project to Folder](https://user-images.githubusercontent.com/42922801/229332501-06269206-99d2-4f23-b3b3-a30e26282b76.JPG)
 5. on the directory you choose (for this case D:\Project\Python) right click on the ZIP Project and click 'Extract Here' (if you use winrar)
 ![ZIP Project to destination folder](https://user-images.githubusercontent.com/42922801/229332574-90260518-3c7d-45c1-83eb-832542e3dc2d.JPG)
 ![ZIP Project extract here](https://user-images.githubusercontent.com/42922801/229332614-7657a8b0-b867-4ea4-9813-f8788e2f928c.jpg)
