@@ -110,6 +110,7 @@ def EditPost(request):
         tittle=request.POST['postTittle']
         content=request.POST['postContent']
         # update content and tittle here
+        # for admin need to search for the post id only because admin can update or delete all post, include comments
         post = forumPost.objects.filter(username=user).get(id_post=post_id)
         post.postTittle = tittle
         post.postText = content
