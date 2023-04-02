@@ -67,6 +67,9 @@ Delete Comment. for delete comment just click the comment that created. once pre
 
 ADMIN ROLE
 What is ADMIN Role OR ADMIN user. ADMIN user is a type of user that can bypass all the ownership. which mean the user can make, update, delete, read post belong to other user and also make, update, delete, comment. to indicate if user is an admin or not go to the main page '/forum' and look for the top left below the HOME, LOGIN, LOGOUT, REGISTER link. there is a table with username, role, is Admin. if the is Admin is True then the user has ADMIN Role.
+![Forum API Admin User](https://user-images.githubusercontent.com/42922801/229329243-a9c98763-8460-4d99-ae8d-ceef2865983d.JPG)
 
+the operation on post and comment are still the same with the difference is that on the viewpost you can edit the post and comment that is belong to other user.
 
-
+Where I can create user with the admin role ?
+unfortunately you can't create user within the '/forum' page (or path). this indicate that when you register you actually create a user without an admin role. the reason behind this is the security. on the real production server you don't want anyone to create admin user which cause your post and comment to be modified unresponsibly. hence, to create a user admin it has to be in a local network (or office network) where only a certain people can access the network. the site or path to create admin user is 'http://<your_host_ip_address>:8000/admin. this '/admin' path will be block if someone try to access from the internet. however, you can login on the '/forum' site as an admin user from the internet. on this mini forum api go to the file 'admin.txt' 
