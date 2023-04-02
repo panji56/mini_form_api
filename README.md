@@ -4,6 +4,7 @@ Mini Forum API is an simple API service that allows to make post per user, comme
 
 To start the mini forum api open the root website:
 http://localhost:8000/forum
+OR replace localhost with the IP address of the server (the computer that run the django mini forum api)
 
 after open the browser you will see the nav menu (HOME, LOGIN, LOGOUT, REGISTER) and the list of available posts to be read. you can read the post by click 'Show Post'. note that you need to login (or register) to make post or comment.
 
