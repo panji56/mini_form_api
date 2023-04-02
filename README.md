@@ -63,4 +63,7 @@ Change the comment
 ![Updated Comment](https://user-images.githubusercontent.com/42922801/229327870-fb1322fd-3004-4f69-a599-68d86122383c.JPG)
 Updated comment
 
+Delete Comment. for delete comment 
+
+
 ADMIN ROLE
