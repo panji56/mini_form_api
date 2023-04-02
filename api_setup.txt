@@ -12,12 +12,14 @@ Via GIT:
 5. open browser then type 'http://localhost:8000/forum to access the main page
 
 Via ZIP Project:
-1. ZIP Project
-2. put the ZIP Project on any directory do you want
-3. on the directory you choose right click on the ZIP Project and click 'unzip'
-4. use cmd and cd to path of directory and the folder where contain the project file
-4. on cmd type 'py manage.py runserver' to start the server
-5. open browser then type 'http://localhost:8000/forum to access the main page
+1. open github, https://github.com/panji56/mini_form_api
+2. click 'Code' and click 'Download ZIP'
+3. save it to downloads or your favorite folder
+4. the file name should be 'mini_form_api-Main'. then move to the favorite folder you desire
+5. on the directory you choose right click on the ZIP Project and click 'Extract Here' (if you use winrar)
+6. use cmd and cd to path of directory you put the project 'mini_form_api-Main' folder and cd to the 'mini_form_api-Main' folder
+7. on cmd type 'py manage.py runserver' to start the server
+8. open browser then type 'http://localhost:8000/forum to access the main page
 
 after complete set up you can back to readme.md to use the mini forum api
 https://github.com/panji56/mini_form_api/blob/7023e68b4660b48574557547da899ef3334a4fd1/README.md

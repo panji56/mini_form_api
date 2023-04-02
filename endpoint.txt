@@ -1,6 +1,51 @@
 CRUD Part
 
+for the authentication endpoints
+'/forum/loginsys' to login to the mini forum API
+payload     : POST Data : {'user':<username>,'pass':<password>}, Cookies : csrftoken
+response    : redirect to '/forum' and Cookies sessionid
+
+'/forum/adduser' to register user to mini forum API
+payload     : POST Data : {'username':<username>,'password':<password>,'email':<email>}, Cookies : csrftoken
+response    : redirect to '/forum' and Cookies sessionid
+
+'/forum/logout' to logout user from the mini forum API
+payload     : Cookies : csrftoken and sessionid
+response    : redirect to '/forum' and remove Cookies sessionid
+
 for the POST CRUD endpoints
+CREATE Post (required login)
 '/forum/inserpost' to add post to the mini forum API
-payload   : POST data : {'postTittle':<value>,'postContent',<>,''}
-response  : 
+payload   : POST data : {'postTittle':<value>,'postContent':<value>}, Cookies : csrftoken and sessionid
+response  : redirect to '/forum'
+
+UPDATE Post (required login)
+'/forum/updatepost' to update the post
+payload     : POST data : {'id_post':<id_post value>,'postTittle':<value>,'postContent':<value>}, Cookies : csrftoken and sessionid
+response    : redirect to '/forum/viewpost?id_post=<post_id>' where <post_id> obtain from the POST data attribute 'id_post'
+
+DELETE Post (required login)
+'/forum/deletepost' to delete the post
+payload     : POST data : {'id_post':<id_post>}, Cookies : csrftoken and sessionid
+response    : redirect to '/forum'
+
+READ Post
+'/forum/viewpost?id_post=<id_post>'
+payload     : GET data : {'id_post':<id_post>}
+response    : a webpage contain the post based on post_id and it's associated comment
+
+for the comment CRUD endpoints
+CREATE Comment (required login)
+'/forum/makecomment' to create on comment on certain post
+payload     : POST data : {'id_post':<id_post>,'comment':<value>}, Cookies : csrftoken and sessionid
+response    : redirect to '/forum/viewpost?id_post=<post_id>' where <post_id> obtain from the POST data attribute 'id_post'
+
+UPDATE Comment (required login)
+'/forum/updatecomment' to update comment on certain post
+payload     : POST data : {'id_post':<id_post>,'comment':<value>,'id_comment':<id_comment>}, Cookies : csrftoken and sessionid
+response    : redirect to '/forum/viewpost?id_post=<post_id>' where <post_id> obtain from the POST data attribute 'id_post'
+
+DELETE Comment (required login)
+'/forum/deletecomment' to delete comment on certain post
+payload     : POST data : {'id_post':<id_post>,'id_comment':<id_comment>}, Cookies : csrftoken and sessionid
+response    : redirect to '/forum'
