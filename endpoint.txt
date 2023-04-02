@@ -1,0 +1,6 @@
+CRUD Part
+
+for the POST CRUD endpoints
+'/forum/inserpost' to add post to the mini forum API
+payload   : POST data : {'postTittle':<value>,'postContent',<>,''}
+response  : 
