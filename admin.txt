@@ -1,0 +1,13 @@
+user: admin
+email: admin@example.com
+pass: example.com.admin
+
+#list of usernames
+user : panji
+pass : panji12345
+
+user : mypanji
+pass : 12345panji
+
+user : anotherpanji
+pass : iUjHyK998

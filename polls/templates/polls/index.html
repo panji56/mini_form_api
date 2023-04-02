@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Form API</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <script type="text/javascript" scr="{{STATIC_URL}}js/jquery.js"></script>
+</head>
+<body>
+    <div class="container-fluid"> 
+        <!-- login user at the top -->
+        <div class="row mt-5 mb-3">
+            <div class="col">
+                <a href="/forum" class="p-2"> Home </a>
+                <a href="/forum/login" class="p-2"> Login </a>
+                <a href="/forum/logout" class="p-2"> Logout </a>
+                <a href="/forum/register" class="p-2"> Register </a>
+            </div>
+        </div>
+        <!-- show current logged in user and role -->
+        {% if user.is_authenticated %}
+        <div class="row mt-2 mb-3">
+            <div class="col-3">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Username</th>
+                            <td>{{ user.username }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Role</th>
+                            <td>{{ user.user_permissions }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Is Admin</th>
+                            <td>{{user.is_superuser}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% endif %}
+        <!-- create posts -->
+        <!-- only for authencitated user -->
+        {% if user.is_authenticated %}
+        <div class="row mt-5 mb-5">
+            <div class="col">
+                <form action="/forum/insertpost" method="POST" class="container-fluid border border-info">
+                    <h4 class="border-bottom border-info">Make a Post</h4>
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-label"> Post Tittle : </label>
+                            <input class="form-control" type="text" name="postTittle">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-label"> Post Content : </label><br>
+                            <!-- <input type="text" name="postContent"> -->
+                            <textarea name="postContent" class="form-control" rows="5">Enter your post here ...</textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label> Submit Post : </label>
+                            <input type="submit" name="submitPost">  
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {% endif %}
+        <!-- list of posts -->    
+        <div class="row mb-5 mt-5">
+            <div class="col">
+                <!-- show per post -->
+                <div class="container-fluid border border-dark">
+                    <h4>Post Lists</h4>
+                    <div class="row pt-3 border-top border-bottom border-dark">
+                        <div class="col-9">
+                            <p>Post Tittle List</p>
+                        </div>
+                        <div class="col-3">
+                            <p>See the post</p>
+                        </div>
+                    </div>
+                {% for data in postList %}
+                    <div class="row pt-4 border-bottom border-info">
+                        <div class="col-9">
+                            Post Tittle : "{{ data.postTittle }}", <i>by : {{ data.username.username }}</i>
+                        </div>
+                        <!-- if possible, show the first pharagrah of post -->
+                        <!-- {{ data.postText }} -->
+                        <!-- a form to show the post and comment -->
+                        <div class="col-3">
+                            <form action="/forum/viewpost" method="GET">
+                                
+                                <input type="hidden" name="id_post" value="{{ data.id_post }}">
+                                <input type="submit" value="Show Post">
+                            </form>
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

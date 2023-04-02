@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Post</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row mt-5 mb-3">
+            <div class="col">
+                <a href="/forum" class="p-2"> Home </a>
+                <a href="/forum/login" class="p-2"> Login </a>
+                <a href="/forum/logout" class="p-2"> Logout </a>
+                <a href="/forum/register" class="p-2"> Register </a>
+            </div>
+        </div>
+        <div class="row m-4">
+            <!-- to show the post -->
+            <h1>{{ post.postTittle }}</h1>
+            <div class="col mt-4 mb-5" id="post">
+                <p>{{ post.postText }}</p>
+            </div>
+        </div>
+        <!-- show this update post element if user login by check cookies -->
+        <!-- will put admin to edit all post add OR role == 'admin' after check username -->
+        {% if user.is_authenticated %}
+        {% if user.username == post.username.username or user.is_superuser %}
+        <div class="row mt-4 mb-5">
+            <!-- to edit the post (user's post only, except for admin split by role) -->
+            <div class="col-9" id="editPost">
+                <form action="/forum/updatepost" method="POST" class="container-fluid" id="updatepost">
+                    <h4> Edit Post Area </h4>
+                    {% csrf_token %}
+                    <input type="hidden" name="id_post" value="{{ post.id_post }}">
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label class="form-label"> Post Tittle : </label>
+                            <input class="form-control" type="text" name="postTittle" value="{{ post.postTittle }}">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label class="form-label"> Post Content : </label><br>
+                            <textarea class="form-control" form="updatepost" rows="4" name="postContent">{{post.postText}}</textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label class="from-label"> Update Post : </label>
+                            <input type="submit" name="submitPost" value="Update Post">  
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- delete post here -->
+                <div class="col-3" id="deletePost">
+                    <form action="/forum/deletepost" method="POST" class="container-fluid">
+                        <h4> Delete Post Area</h4>
+                        {% csrf_token %}
+                        <input type="hidden" name="id_post" value="{{ post.id_post }}">
+                        <label> Delete Post ? </label>
+                        <input type="submit" name="deletePost" value="Delete"> 
+                    </form>
+                </div>
+        {% endif %} 
+        {% endif %}
+        <div class="row mt-4 mb-5">
+            <!-- to show the comment and update it -->
+            <!-- only show update comment for user's comment (except for admin), split by role -->
+            <div class="col">
+                <div class="container-fluid border border-dark">
+                    <div class="col border-bottom border-dark">
+                        <h4> Comments </h4>
+                    </div>
+                    {% for cm in comments %}
+                        <div class="row mt-4">
+                            <!-- show username who make comment to the post -->
+                            <div class="col">
+                                <i>by {{ cm.username.username }}. the comment</i>
+                            </div>
+                        </div>
+                        <div class="row mt-4 border-bottom border-info">
+                            <!-- show comment -->
+                            <div class="col">
+                                <p> - {{ cm.comment }}</p>
+                            </div>
+                            <!-- update comment -->
+                            {% if user.is_authenticated %}
+                            {% if user.username == cm.username.username or user.is_superuser %}
+                            <div class="col">
+                                <form action="/forum/updatecomment" method="POST">
+                                    {% csrf_token %}
+                                    <input type="hidden" value="{{ cm.id_comment }}" name="id_comment">
+                                    <input type="hidden" value="{{ post.id_post }}" name="id_post">
+                                    <input class="form-control"type="text" name="comment" value="{{ cm.comment }}">
+                                    <input type="submit" name="Update Comment" value="Update Comment">
+                                </form>
+                                <!-- delete comment -->
+                                    <form action="/forum/deletecomment" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" value="{{ cm.id_comment }}" name="id_comment">
+                                        <input type="hidden" value="{{ post.id_post }}" name="id_post">
+                                        <input type="submit" name="Delete comment" value="Delete Comment">
+                                    </form>
+                            </div>
+                            {% endif %}
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <!-- to make a comment -->
+            <!-- only for authencitated user -->
+            
+            {% if user.is_authenticated %}
+            <div class="col">
+                <form action="/forum/makecomment" method="POST" class="container-fluid" id="postcomment">
+                    <h4> Give a comment to the post</h4>
+                    {% csrf_token %}
+                    <input type="hidden" value="{{ post.id_post }}" name="id_post"> 
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-label"> Comment : </label>
+                            <textarea class="form-control" form="postcomment" name="comment" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="submit" label="Make Comment">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
