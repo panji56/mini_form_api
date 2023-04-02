@@ -20,4 +20,4 @@ Via ZIP Project:
 5. open browser then type 'http://localhost:8000/forum to access the main page
 
 after complete set up you can back to readme.md to use the mini forum api
-[https://github.com/panji56/mini_form_api/blob/39daba83e6b85a3d07106f09a7bf7cda93d2628a/README.md](https://github.com/panji56/mini_form_api/blob/33ddd1fc15869da0c0d6252525d03c6be20a90ef/README.md)
+https://github.com/panji56/mini_form_api/blob/7023e68b4660b48574557547da899ef3334a4fd1/README.md
