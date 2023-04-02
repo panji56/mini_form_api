@@ -20,3 +20,6 @@ STEP 1: Register
 ![Main with Make a Post](https://user-images.githubusercontent.com/42922801/229325360-d6ee7e1e-f63c-487f-9245-3eeb165324b7.JPG)
 8. click one of the post list. you can see that you can make comment to the post
 ![view post with make a comment](https://user-images.githubusercontent.com/42922801/229325455-69e74d9b-3817-4c29-aeb5-f51a44094e1d.JPG)
+9. if you want to log out, click the LOGOUT link.
+
+STEP 2: Login
