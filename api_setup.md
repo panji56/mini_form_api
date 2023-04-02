@@ -31,3 +31,5 @@ Via ZIP Project:
 
 after complete set up you can back to readme.md to use the mini forum api
 https://github.com/panji56/mini_form_api/blob/7023e68b4660b48574557547da899ef3334a4fd1/README.md
+
+OR click the 'mini_form_api' after 'panji56/' to see how to use the mini forum api
