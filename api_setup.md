@@ -10,7 +10,7 @@ But Before you continue, you must install git (for windows or linux) and underta
 1. open github, https://github.com/panji56/mini_form_api
 2. on the HTTPS, click the copy symbol or copy the 'https://..' string. this will be the git address to be clone
 ![Download ZIP Project](https://user-images.githubusercontent.com/42922801/229333815-5ec491ba-102b-45c1-99a0-b313dd6f5f84.JPG)
-3. clone the repository with git OR zip the project
+3. clone the repository with git
 4. for clone put in any directory do you want
 5. use cmd and cd to path of directory where you put the git clone result
 6. on cmd type 'py manage.py runserver' to start the server
