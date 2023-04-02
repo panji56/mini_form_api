@@ -63,7 +63,10 @@ Change the comment
 ![Updated Comment](https://user-images.githubusercontent.com/42922801/229327870-fb1322fd-3004-4f69-a599-68d86122383c.JPG)
 Updated comment
 
-Delete Comment. for delete comment 
-
+Delete Comment. for delete comment just click the comment that created. once press Delete it will reload the view post page and the comment will be dissapear.
 
 ADMIN ROLE
+What is ADMIN Role OR ADMIN user. ADMIN user is a type of user that can bypass all the ownership. which mean the user can make, update, delete, read post belong to other user and also make, update, delete, comment. to indicate if user is an admin or not go to the main page '/forum' and look for the top left below the HOME, LOGIN, LOGOUT, REGISTER link. there is a table with username, role, is Admin. if the is Admin is True then the user has ADMIN Role.
+
+
+
