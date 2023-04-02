@@ -23,3 +23,16 @@ STEP 1: Register
 9. if you want to log out, click the LOGOUT link.
 
 STEP 2: Login
+1. After you logout or you already have an account in this API then click LOGIN
+2. Enter the username (could be phone or email depends what you fill during username registration) and password
+![Going to Login](https://user-images.githubusercontent.com/42922801/229325834-42092015-d5b2-4ceb-a64d-8e7c7117a20b.JPG)
+3. Click login
+4. if success, you will be redirected to main homepage '/forum', if not you will see 401 at the top left of the screen indicate that maybe the username does not exist or the password for the username does not match.
+5. the view if user success login.
+![Succesfull Login](https://user-images.githubusercontent.com/42922801/229325847-e37a386c-4151-44af-8aa3-13a8d11c1a06.JPG)
+
+Now to the post feature, a user can create, edit, delete, and read post. only the owner of the post can edit, delete the post. any user (including not authenticated) can read all post. Let's create the first post.
+
+Finally the comment feature. The comment feature use to give comment to the post. any user can give comment to any post belong to other user. However, the comment that you make can be seen by other user including both the owner of the post, authenticated user, guest user. the comment can be deleted or updated by the user who make the comment. Let's create the first comment.
+
+ADMIN ROLE
