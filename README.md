@@ -47,8 +47,15 @@ here is the result
 ![Updated Post](https://user-images.githubusercontent.com/42922801/229326869-e1e07cb3-123b-4593-a7aa-39ea52808a26.JPG)
 
 Delete the Post
-to delete the post, just click the Delete Post Button. When you delete the post the comment related to the post will also be deleted.
+to delete the post, just click the Delete Post Button. When you delete the post the comment related to the post will also be deleted. after that you will be redirected to main '/forum' page again.
 
 Finally the comment feature. The comment feature use to give comment to the post. any user can give comment to any post belong to other user. However, the comment that you make can be seen by other user including both the owner of the post, authenticated user, guest user. the comment can be deleted or updated by the user who make the comment. Let's create the first comment.
+1. Let's open other post created by different user. for example the post created by user 'panji'.
+![PostList](https://user-images.githubusercontent.com/42922801/229327132-90dbc771-1951-46b7-a914-121a2016812e.JPG)
+2. on the 'Give a comment the Post' part you can fill the text area in that part and click submit
+![Make a Comment to Another user](https://user-images.githubusercontent.com/42922801/229327186-a0118645-ec97-4c7c-b6c6-da1386bc85e3.JPG)
+4. the comment will be seen on the comments. you also see the update and delete comment part.
+![Make a Comment to Another user](https://user-images.githubusercontent.com/42922801/229327241-43f733b1-ae95-4049-a44d-a4a724fba0d9.JPG)
+
 
 ADMIN ROLE
