@@ -55,7 +55,7 @@ Finally the comment feature. The comment feature use to give comment to the post
 2. on the 'Give a comment the Post' part you can fill the text area in that part and click submit
 ![Make a Comment to Another user](https://user-images.githubusercontent.com/42922801/229327186-a0118645-ec97-4c7c-b6c6-da1386bc85e3.JPG)
 4. the comment will be seen on the comments. you also see the update and delete comment part.
-![Make a Comment to Another user](https://user-images.githubusercontent.com/42922801/229327241-43f733b1-ae95-4049-a44d-a4a724fba0d9.JPG)
+![Show comment for the post](https://user-images.githubusercontent.com/42922801/229327313-40d72fb1-dcd8-40b3-a6e0-7d5287cd15de.JPG)
 
 
 ADMIN ROLE
