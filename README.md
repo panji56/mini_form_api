@@ -10,4 +10,9 @@ after open the browser you will see the nav menu (HOME, LOGIN, LOGOUT, REGISTER)
 
 to begin with, start by follow step 1 but if you already register go to step 2 (perform login):
 STEP 1: Register
-
+1. Click 'Register' on the navigation menu.
+2. enter username and password (for username I recommended to use phone number or email because the usernames in the database has to be unique, if you can't create the username use phone or email)
+3. enter email address
+4. click Register
+5. After success, you will be directed to main /forum page, where you can see the create post part
+6. click one of the post list you can see that you can make comment to the post
