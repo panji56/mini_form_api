@@ -16,6 +16,8 @@ But Before you continue, you must install git (for windows or linux) and underta
 6. on cmd type 'py manage.py runserver' to start the server
 7. open browser then type 'http://localhost:8000/forum to access the main page
 
+after this go to click 'mini_form_api' after 'panji56/' to see the usage of mini forum api
+
 Via ZIP Project:
 1. open github, https://github.com/panji56/mini_form_api
 2. click 'Code' and click 'Download ZIP'
