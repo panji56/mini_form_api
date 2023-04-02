@@ -76,5 +76,7 @@ What is ADMIN Role OR ADMIN user. ADMIN user is a type of user that can bypass a
 
 the operation on post and comment are still the same with the difference is that on the viewpost you can edit the post and comment that is belong to other user.
 
+on this mini_form_api the admin account is at the admin.txt file. find the user with 'admin' and use the password
+
 Where I can create user with the admin role ?
 unfortunately you can't create user within the '/forum' page (or path). this indicate that when you register you actually create a user without an admin role. the reason behind this is the security. on the real production server you don't want anyone to create admin user which cause your post and comment to be modified unresponsibly. hence, to create a user admin it has to be in a local network (or office network) where only a certain people can access the network. the site or path to create admin user is 'http://<your_host_ip_address>:8000/admin. this '/admin' path will be block if someone try to access from the internet. however, you can login on the '/forum' site as an admin user from the internet. on this mini forum api go to the file 'admin.txt' and find the user start with 'admin'. use the user 'admin' and it's password to login to the mini forum api as an admin user. the file also contain users for documentation and testing purpose only.
