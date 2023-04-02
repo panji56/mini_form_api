@@ -111,7 +111,10 @@ def EditPost(request):
         content=request.POST['postContent']
         # update content and tittle here
         # for admin need to search for the post id only because admin can update or delete all post, include comments
-        post = forumPost.objects.filter(username=user).get(id_post=post_id)
+        if user.is_superuser:
+            post = forumPost.objects.get(id_post=post_id)
+        else:
+            post = forumPost.objects.filter(username=user).get(id_post=post_id)
         post.postTittle = tittle
         post.postText = content
         post.save()
@@ -125,7 +128,11 @@ def DeletePost(request):
         user = request.user
         post_id=request.POST['id_post']
         f_post = forumPost.objects.get(id_post=post_id)
-        post = forumPost.objects.filter(username=user).get(id_post=f_post.id_post)
+        #if superuser, filter based only id_post
+        if user.is_superuser:
+            post = forumPost.objects.filter(username=user).get(id_post=f_post.id_post)
+        else:
+            post = forumPost.objects.get(id_post=f_post.id_post)
         #delete content here
         post.delete()
     return redirect('/forum')
@@ -139,7 +146,11 @@ def DeleteComment(request):
         user=request.user
         post_id=request.POST['id_post']
         com_id=request.POST['id_comment']
-        cm = forumComment.objects.filter(username=user).get(id_comment=com_id)
+        # if superuser, delete by only comment id
+        if user.is_superuser:
+            cm = forumComment.objects.get(id_comment=com_id)
+        else:
+            cm = forumComment.objects.filter(username=user).get(id_comment=com_id)
         cm.delete()
     return redirect('/forum/viewpost?id_post='+post_id)
 
@@ -153,7 +164,11 @@ def UpdateComment(request):
         comment=request.POST['comment']
         id_post=request.POST['id_post']
         f_post = forumPost.objects.get(id_post=id_post)
-        cm = forumComment.objects.filter(username=user).get(id_post=f_post)
+        #if superuser, update only by id_comment
+        if user.is_superuser:
+            cm = forumComment.objects.get(id_comment=com_id)
+        else:
+            cm = forumComment.objects.filter(username=user).filter(id_post=f_post.id_post).get(id_comment=com_id)
         cm.comment = comment
         cm.save()
     return redirect('/forum/viewpost?id_post='+id_post)
