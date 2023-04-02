@@ -11,6 +11,9 @@ after open the browser you will see the nav menu (HOME, LOGIN, LOGOUT, REGISTER)
 to begin with, start by follow step 1 but if you already register go to step 2 (perform login):
 STEP 1: Register
 1. Click 'Register' on the navigation menu.
+
+![Main to Register](https://user-images.githubusercontent.com/42922801/229325210-3d286c5f-cc1d-4d63-9842-37d0bf44499a.JPG)
+
 2. enter username and password (for username I recommended to use phone number or email because the usernames in the database has to be unique, if you can't create the username use phone or email)
 3. enter email address
 4. click Register
