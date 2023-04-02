@@ -47,8 +47,29 @@ here is the result
 ![Updated Post](https://user-images.githubusercontent.com/42922801/229326869-e1e07cb3-123b-4593-a7aa-39ea52808a26.JPG)
 
 Delete the Post
-to delete the post, just click the Delete Post Button. When you delete the post the comment related to the post will also be deleted.
+to delete the post, just click the Delete Post Button. When you delete the post the comment related to the post will also be deleted. after that you will be redirected to main '/forum' page again.
 
 Finally the comment feature. The comment feature use to give comment to the post. any user can give comment to any post belong to other user. However, the comment that you make can be seen by other user including both the owner of the post, authenticated user, guest user. the comment can be deleted or updated by the user who make the comment. Let's create the first comment.
+1. Let's open other post created by different user. for example the post created by user 'panji'.
+![PostList](https://user-images.githubusercontent.com/42922801/229327132-90dbc771-1951-46b7-a914-121a2016812e.JPG)
+2. on the 'Give a comment the Post' part you can fill the text area in that part and click submit
+![Make a Comment to Another user](https://user-images.githubusercontent.com/42922801/229327186-a0118645-ec97-4c7c-b6c6-da1386bc85e3.JPG)
+4. the comment will be seen on the comments. you also see the update and delete comment part.
+![Show comment for the post](https://user-images.githubusercontent.com/42922801/229327313-40d72fb1-dcd8-40b3-a6e0-7d5287cd15de.JPG)
+
+Update the comment. After you can make the comment you can update the comment. but remember the text area to modify the comment is very small so you have to be very careful if you want to change it. to begin with change the text for the comment part on the right side and click 'Update Comment'.
+![update the comment](https://user-images.githubusercontent.com/42922801/229327856-81066b11-a006-4358-860a-300ab590f44c.JPG)
+Change the comment
+![Updated Comment](https://user-images.githubusercontent.com/42922801/229327870-fb1322fd-3004-4f69-a599-68d86122383c.JPG)
+Updated comment
+
+Delete Comment. for delete comment just click the comment that created. once press Delete it will reload the view post page and the comment will be dissapear.
 
 ADMIN ROLE
+What is ADMIN Role OR ADMIN user. ADMIN user is a type of user that can bypass all the ownership. which mean the user can make, update, delete, read post belong to other user and also make, update, delete, comment. to indicate if user is an admin or not go to the main page '/forum' and look for the top left below the HOME, LOGIN, LOGOUT, REGISTER link. there is a table with username, role, is Admin. if the is Admin is True then the user has ADMIN Role.
+![Forum API Admin User](https://user-images.githubusercontent.com/42922801/229329243-a9c98763-8460-4d99-ae8d-ceef2865983d.JPG)
+
+the operation on post and comment are still the same with the difference is that on the viewpost you can edit the post and comment that is belong to other user.
+
+Where I can create user with the admin role ?
+unfortunately you can't create user within the '/forum' page (or path). this indicate that when you register you actually create a user without an admin role. the reason behind this is the security. on the real production server you don't want anyone to create admin user which cause your post and comment to be modified unresponsibly. hence, to create a user admin it has to be in a local network (or office network) where only a certain people can access the network. the site or path to create admin user is 'http://<your_host_ip_address>:8000/admin. this '/admin' path will be block if someone try to access from the internet. however, you can login on the '/forum' site as an admin user from the internet. on this mini forum api go to the file 'admin.txt' 
