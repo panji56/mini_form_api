@@ -57,5 +57,10 @@ Finally the comment feature. The comment feature use to give comment to the post
 4. the comment will be seen on the comments. you also see the update and delete comment part.
 ![Show comment for the post](https://user-images.githubusercontent.com/42922801/229327313-40d72fb1-dcd8-40b3-a6e0-7d5287cd15de.JPG)
 
+Update the comment. After you can make the comment you can update the comment. but remember the text area to modify the comment is very small so you have to be very careful if you want to change it. to begin with change the text for the comment part on the right side and click 'Update Comment'.
+![update the comment](https://user-images.githubusercontent.com/42922801/229327856-81066b11-a006-4358-860a-300ab590f44c.JPG)
+Change the comment
+![Updated Comment](https://user-images.githubusercontent.com/42922801/229327870-fb1322fd-3004-4f69-a599-68d86122383c.JPG)
+Updated comment
 
 ADMIN ROLE
