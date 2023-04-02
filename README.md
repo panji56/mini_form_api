@@ -3,7 +3,7 @@ Mini Forum API
 Mini Forum API is an simple API service that allows to make post per user, comment the post from another user. beside from creating the post or comment the user can edit the post or comment create by user.
 
 before you start to use the mini forum API you want to set it up first by click the link here:
-api_setup.md
+[api_setup.md](https://github.com/panji56/mini_form_api/blob/39daba83e6b85a3d07106f09a7bf7cda93d2628a/api_setup.md)
 
 the requirements is that python 3.7+, Django, django-bootstrap-v5, django-jquery must be installed
 
